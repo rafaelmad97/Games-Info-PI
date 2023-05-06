@@ -3,6 +3,8 @@ import "./App.css";
 function App() {
   fetch("https://gamespiapi-production.up.railway.app/genres", {
     method: "GET",
+    headers: new Headers({ "Content-type": "application/json" }),
+    mode: "no-cors",
   })
     .then((response) => response.json())
     .then((response) => console.log(response));
