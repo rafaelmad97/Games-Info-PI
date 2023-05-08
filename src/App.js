@@ -1,16 +1,17 @@
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
+import LangingPage from "./components/landingPage/landingPage";
+import HomePage from "./components/homePage/homePage";
 
 function App() {
-  fetch("https://gamespiapi-production.up.railway.app/genres", {
-    method: "GET",
-    headers: new Headers({ "Content-type": "application/json" }),
-    mode: "no-cors",
-  })
-    .then((response) => response.json())
-    .then((response) => console.log(response));
   return (
     <div className="App">
-      <h1>Henry Videogames</h1>
+      <div className="App-header">
+        <Switch>
+          <Route path="/" exact component={LangingPage} />
+          <Route path="/home" component={HomePage} />
+        </Switch>
+      </div>
     </div>
   );
 }

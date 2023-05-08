@@ -1,0 +1,10 @@
+.card {
+    box-shadow: 0 0 20px #4f9;
+    text-shadow: 0 0 30px #fff;
+    margin: 8px;
+    padding: 16px
+}
+.videogame_image {
+    height: 12rem;
+    width: 12rem;
+}

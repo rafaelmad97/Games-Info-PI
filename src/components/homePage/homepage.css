@@ -1,0 +1,21 @@
+
+.homepage {
+    color: aliceblue;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+.background_home::before {
+    position: fixed;
+    background-image: url(https://preview.redd.it/i-drew-this-pixel-art-of-an-old-arcade-and-called-it-v0-fbs0kys9j5ja1.gif?format=png8&s=8dd4ea0c336226a33a73bfeec4ff558972a058fb);
+    background-size: cover;
+    background-size: cover;
+    content: " ";
+    filter: blur(2px);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}

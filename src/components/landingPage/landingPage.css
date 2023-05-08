@@ -1,0 +1,16 @@
+.background_leading::before {
+    position: absolute;
+    background-image: url(https://c.wallhere.com/photos/97/26/video_games_pixel_art_Super_Mario-212966.jpg!d);
+    background-position: center;
+    background-size: cover;
+    content: " ";
+    filter: brightness(0.85);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+

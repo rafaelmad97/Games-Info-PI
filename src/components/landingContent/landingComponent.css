@@ -1,0 +1,27 @@
+.content {    
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.landingPage {
+    color: yellow;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.button {
+    height: 100px;
+    width: 200px;
+    cursor: pointer;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f87d8071-79aa-447e-8517-fe84f9487587/d2zz7bi-226e7201-153c-4bf1-a888-d401bb7672fb.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y4N2Q4MDcxLTc5YWEtNDQ3ZS04NTE3LWZlODRmOTQ4NzU4N1wvZDJ6ejdiaS0yMjZlNzIwMS0xNTNjLTRiZjEtYTg4OC1kNDAxYmI3NjcyZmIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.hHkXOjNFLy4n8841ctfKA4jFbxc8KT_YHRf2HzOotvU);
+    background-size: contain;
+    background-repeat: space;
+    background-position: center;
+}
+
+
+
