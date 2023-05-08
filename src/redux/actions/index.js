@@ -1,4 +1,4 @@
-const API_URL = "https://gamespiapi-production.up.railway.app/";
+const API_URL = "https://gamespiapi-production.up.railway.app";
 
 export const GET_GENRES = "GET_GENRES";
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
