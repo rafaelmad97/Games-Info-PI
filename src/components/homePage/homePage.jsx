@@ -2,15 +2,10 @@ import { Component } from "react";
 import * as actions from "../../redux/actions/index";
 import { connect } from "react-redux";
 import ListVideogames from "../listVideogames/listVideogames";
-
 import "./homepage.css";
 import SearchVideogame from "../searchVideogame/searchVideogame";
 
 class HomePage extends Component {
-  state = {
-    pages: 0,
-  };
-
   componentDidMount() {
     this.props.getGenres();
     this.props.getVideogames();
@@ -21,11 +16,7 @@ class HomePage extends Component {
     return (
       <div>
         <div className="content homepage">
-          <SearchVideogame
-            searchVideogame={this.props.getVideogamesbyName}
-            searchedVideogame={this.props.searched_videogames}
-            genres={this.props.genres}
-          />
+          <SearchVideogame />
           <ListVideogames
             videogames={this.props.videogames}
             db_videogames={this.props.databases_videogames}

@@ -1,4 +1,4 @@
-const API_URL = "https://gamespiapi-production.up.railway.app";
+const API_URL = "http://localhost:3001";
 
 export const GET_GENRES = "GET_GENRES";
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
@@ -54,6 +54,21 @@ export const getVideogamesbyName = (name) => {
   };
 };
 
+export const getVideogamesbyID = async (id) => {
+  return await fetch(`${API_URL}/videogames/${id}`)
+    .then((res) => res.json())
+    .finally();
+};
+
+export const createVideoGame = async (formdata) => {
+  console.log(formdata);
+  // return await fetch(`${API_URL}/videogames`,{
+  //   method: "POST",
+  //   body: JSON.stringify({
+
+  //   })
+  // })
+};
 /* 3️⃣ ***ACTIONS*** 3️⃣ */
 
 //📢 Puedes utilizar axios si lo deseas, solo debes importarlo 📢

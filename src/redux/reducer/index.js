@@ -28,7 +28,6 @@ REQUISITOS
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case actions.GET_GENRES:
-      console.log(action.payload);
       return { ...state, genres: action.payload };
     case actions.GET_VIDEOGAMES:
       return { ...state, videogames: action.payload };

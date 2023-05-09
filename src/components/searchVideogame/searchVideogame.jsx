@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import "./searchvideogame.css";
 import CardDetail from "../cardDetail/cardDetail";
+import { getVideogamesbyName } from "../../redux/actions";
+import { connect } from "react-redux";
 
 const SearchVideogame = (props) => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    props.searchVideogame(search);
+    props.getVideogamesbyName(search);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
@@ -26,21 +28,21 @@ const SearchVideogame = (props) => {
           onChange={handleSearch}
           value={search}
           placeholder="Buscar Juego"
-          className="search_input"
+          className="search search_shadow"
         />
         <br />
         <button className="cleanSearch" onClick={(event) => handleClean()}>
-          limpiar
+          Limpiar Resultados
         </button>
       </div>
       <br />
       {search !== "" && (
         <>
-          {props.searchedVideogame.db !== undefined && (
+          {props.searched_videogames.db !== undefined && (
             <>
               <h3>Mis Juegos</h3>
               <div className="results">
-                {props.searchedVideogame.db?.map(({ videogames, fav }) => {
+                {props.searched_videogames.db?.map(({ videogames, fav }) => {
                   return (
                     <CardDetail
                       videogame={{
@@ -52,24 +54,24 @@ const SearchVideogame = (props) => {
                     />
                   );
                 })}
-                {props.searchedVideogame.db.length === 0 && (
+                {props.searched_videogames.db.length === 0 && (
                   <h1>No hay resultados</h1>
                 )}
               </div>
             </>
           )}
           <br />
-          {props.searchedVideogame.api?.results !== undefined && (
+          {props.searched_videogames.api?.results !== undefined && (
             <>
               <h3> Fuente externa</h3>
               <br />
               <div className="results">
-                {props.searchedVideogame?.api.results.map((videogame) => {
+                {props.searched_videogames?.api.results.map((videogame) => {
                   return (
                     <CardDetail videogame={videogame} key={videogame.id} />
                   );
                 })}
-                {props.searchedVideogame.api?.results.length === 0 && (
+                {props.searched_videogames.api?.results.length === 0 && (
                   <h1>No hay resultados</h1>
                 )}
               </div>
@@ -83,4 +85,19 @@ const SearchVideogame = (props) => {
   );
 };
 
-export default SearchVideogame;
+export const mapStateToProps = ({ searched_videogames, genres }) => {
+  return {
+    searched_videogames,
+    genres,
+  };
+};
+
+export const mapDispatchToProps = (dispatch, props) => {
+  return {
+    getVideogamesbyName: (name) => {
+      return dispatch(getVideogamesbyName(name));
+    },
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchVideogame);

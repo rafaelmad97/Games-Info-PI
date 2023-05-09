@@ -1,6 +1,7 @@
 .pages {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .cuadro {
@@ -22,6 +23,23 @@
     justify-content: space-evenly;
     align-content: center;
 }
+
+.button_nav {
+    height: 70px;
+    width: 70px;
+}
+
+.addVideogame {
+    padding: 16px;
+    background-color: rgb(0, 255, 0, 0.8);
+    border: 0px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0);
+    text-shadow: 0 0 30px #000; 
+    cursor: pointer;
+}
+
 .back {
    background-image: url(
     https://dbdzm869oupei.cloudfront.net/img/t-shirts/preview/63801.png
@@ -29,11 +47,9 @@
    background-size: contain;
    transform: scaleX(-1);
    background-repeat: no-repeat;
-   width: 100px;
    background-color: transparent;
     border: transparent;
     cursor: pointer;
-
 }
 
 .foward {
@@ -42,7 +58,6 @@
         );
     background-size: contain;
     background-repeat: no-repeat;
-    width: 100px;
     background-color: transparent;
     border: transparent;
     cursor: pointer;
@@ -74,4 +89,6 @@
     transition: width 0.4s ease-in-out;
     box-shadow: 0 0 20px rgb(237, 14, 174);
     text-shadow: 0 0 30px #fff;
+    cursor: pointer;
+
 }
