@@ -5,12 +5,13 @@ import { getVideogamesbyName } from "../../redux/actions";
 import { connect } from "react-redux";
 
 const SearchVideogame = (props) => {
+  const searchVideogame = props.getVideogamesbyName;
+
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    props.getVideogamesbyName(search);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
+    searchVideogame(search);
+  }, [search, searchVideogame]);
 
   const handleSearch = (event) => {
     setSearch(event.target.value);

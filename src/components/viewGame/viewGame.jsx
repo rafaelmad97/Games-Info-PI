@@ -35,7 +35,7 @@ const ViewGame = (props) => {
           genres: state.isdb ? res[0].fav : res.genres,
         })
       );
-  }, [getVideogamesbyID, params.id]);
+  }, [getVideogamesbyID, params.id, state.isdb]);
 
   const generos = state.isdb
     ? result.genres?.map(({ id_genres }) => {
