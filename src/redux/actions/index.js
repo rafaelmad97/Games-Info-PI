@@ -1,4 +1,6 @@
-const API_URL = "http://localhost:3001";
+const API_URL = true
+  ? "https://gamespiapi-production.up.railway.app"
+  : "http://localhost:3001";
 
 export const GET_GENRES = "GET_GENRES";
 export const GET_VIDEOGAMES = "GET_VIDEOGAMES";
